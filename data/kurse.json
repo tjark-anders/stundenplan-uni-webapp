@@ -1,0 +1,254 @@
+{
+    "kurse": [
+        {
+            "id" : 1,
+            "name": "Webtechnologien",
+            "semester": "SoSe 2026",
+            "ects": 6,
+            "beschreibung": "In diesem Kurs lernen die Studierenden die Grundlagen der Webentwicklung kennen, einschließlich HTML, CSS und JavaScript. Es werden auch fortgeschrittene Themen wie Frameworks und Websicherheit behandelt.",
+            "dozent": "Hans Grönniger",
+            "starttermin": "2026-03-01",
+            "endtermin": "2026-06-20",
+            "termine": [
+                {
+                    "typ": "Vorlesung",
+                    "id": "VL1",
+                    "tag": "Montag",
+                    "block": "2",
+                    "raum": "Audimax",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE1",
+                    "tag": "Montag",
+                    "block": "3",
+                    "raum": "1H.200",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE2",
+                    "tag": "Dienstag",
+                    "block": "2",
+                    "raum": "1H.200",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE3",
+                    "tag": "Freitag",
+                    "block": "1",
+                    "raum": "1H.200",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE4",
+                    "tag": "Freitag",
+                    "block": "2",
+                    "raum": "1H.200",
+                    "wiederholung": "wöchentlich"
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "name": "Betriebssysteme und Netze 2",
+            "semester": "SoSe 2026",
+            "ects": 6,
+            "beschreibung": "In diesem Kurs vertiefen die Studierenden ihr Wissen über Betriebssysteme und Netzwerke. Es werden Themen wie Prozessverwaltung, Speicherverwaltung, Dateisysteme und Netzwerkprotokolle behandelt.",
+            "dozent": "Dozent A",
+            "starttermin": "2026-03-01",
+            "endtermin": "2026-06-20",
+            "termine": [
+                {
+                    "typ": "Vorlesung",
+                    "id": "VL1",
+                    "tag": "Dienstag",
+                    "block": "2",
+                    "raum": "1H.018",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE1",
+                    "tag": "Mittwoch",
+                    "block": "5",
+                    "raum": "1H.238",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE2",
+                    "tag": "Mittwoch",
+                    "block": "3",
+                    "raum": "1H.238",
+                    "wiederholung": "wöchentlich"
+                }
+            ]
+        },
+        {
+            "id" : 3,
+            "name": "Software Engineering",
+            "semester": "SoSe 2026",
+            "ects": 6,
+            "beschreibung": "In diesem Kurs lernen die Studierenden die Prinzipien und Praktiken des Software Engineerings kennen. Es werden Themen wie Softwareentwicklungsmethoden, Anforderungsanalyse, Softwarearchitektur und Testen behandelt.",
+            "dozent": "Dozent B",
+            "starttermin": "2026-03-01",
+            "endtermin": "2026-06-20",
+            "termine": [
+                {
+                    "typ": "Vorlesung",
+                    "id": "VL1",
+                    "tag": "Donnerstag",
+                    "block": "2",
+                    "raum": "1H.018",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE1",
+                    "tag": "Donnerstag",
+                    "block": "4",
+                    "raum": "1H.238",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE2",
+                    "tag": "Donnerstag",
+                    "block": "5",
+                    "raum": "1H.238",
+                    "wiederholung": "wöchentlich"
+                },
+                {
+                    "typ": "Übung",
+                    "id": "UE3",
+                    "tag": "Donnerstag",
+                    "block": "6",
+                    "raum": "1H.238",
+                    "wiederholung": "wöchentlich"
+                }
+            ]
+        },
+        {
+                "id" : 4,
+                "name": "Datenbanken",
+                "semester": "SoSe 2026",
+                "ects": 6,
+                "beschreibung": "In diesem Kurs lernen die Studierenden die Grundlagen der Datenbanktheorie und -praxis kennen. Es werden Themen wie relationale Datenbanken, SQL, Normalisierung und Datenbankdesign behandelt.",
+                "dozent": "Dozent C",
+                "starttermin": "2026-03-01",
+                "endtermin": "2026-06-20",
+                "termine": [
+                    {
+                        "typ": "Vorlesung",
+                        "id": "VL1",
+                        "tag": "Dienstag",
+                        "block": "2",
+                        "raum": "1H.021",
+                        "wiederholung": "wöchentlich"
+                    },
+                    {
+                        "typ": "Übung",
+                        "id": "UE1",
+                        "tag": "Mittwoch",
+                        "block": "4",
+                        "raum": "1H.206",
+                        "wiederholung": "wöchentlich"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Computer Grafik",
+                "semester": "SoSe 2026",
+                "ects": 6,
+                "beschreibung": "In diesem Kurs lernen die Studierenden die Grundlagen der Computergrafik kennen. Es werden Themen wie 2D- und 3D-Grafik, Rendering, Animation und Grafikprogrammierung behandelt.",
+                "dozent": "Dozent D",
+                "starttermin": "2026-03-01",
+                "endtermin": "2026-06-20",
+                "termine": [
+                    {
+                        "typ": "Vorlesung",
+                        "id": "VL1",
+                        "tag": "Montag",
+                        "block": "4",
+                        "raum": "Audimax",
+                        "wiederholung": "wöchentlich"
+                    },
+                    {
+                        "typ": "Übung",
+                        "id": "UE1",
+                        "tag": "Mittwoch",
+                        "block": "3",
+                        "raum": "1H.200",
+                        "wiederholung": "wöchentlich"
+                    },
+                    {
+                        "typ": "Übung",
+                        "id": "UE2",
+                        "tag": "Mittwoch",
+                        "block": "4",
+                        "raum": "1H.200",
+                        "wiederholung": "wöchentlich"
+                     },
+                                         {
+                        "typ": "Übung",
+                        "id": "UE3",
+                        "tag": "Donnerstag",
+                        "block": "3",
+                        "raum": "1H.200",
+                        "wiederholung": "wöchentlich"
+                    },
+                    {
+                        "typ": "Übung",
+                        "id": "UE4",
+                        "tag": "Donnerstag",
+                        "block": "4",
+                        "raum": "1H.200",
+                        "wiederholung": "wöchentlich"
+                     }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Statistik",
+                "semester": "SoSe 2026",
+                "ects": 6,
+                "beschreibung": "In diesem Kurs lernen die Studierenden die Grundlagen der Statistik kennen. Es werden Themen wie deskriptive Statistik, Wahrscheinlichkeitsverteilungen, Hypothesentests und Regression behandelt.",
+                "dozent": "Dozent E",
+                "starttermin": "2026-03-01",
+                "endtermin": "2026-06-20",      
+                "termine": [
+                    {
+                        "typ": "Vorlesung",
+                        "id": "VL1",
+                        "tag": "Montag",
+                        "block": "1",
+                        "raum": "1H.102",
+                        "wiederholung": "wöchentlich"
+                    },
+                    {
+                        "typ": "Übung",
+                        "id": "UE1",
+                        "tag": "Montag",
+                        "block": "2",
+                        "raum": "1H.102",
+                        "wiederholung": "wöchentlich"
+                    },
+                    {
+                        "typ": "Tutorium",
+                        "id": "TU1",
+                        "tag": "Montag",
+                        "block": "3",
+                        "raum": "1H.102",
+                        "wiederholung": "zweiwöchentlich"
+                     }
+                ]
+                
+            }
+
+    ]
+}
