@@ -1,3 +1,55 @@
+body.dark {
+    background-color: #1e1b22;
+    color: #f4effa;
+}
+
+body {
+    background-color: #f7edee;
+    color: #3e2f36;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+/* ----- DARKMODE TOGGLE ----- */
+.theme-toggle {
+    width: 90px;
+    height: 44px;
+    border: none;
+    border-radius: 999px;
+
+    background-color: #fff0b8;
+    cursor: pointer;
+}
+
+.theme-toggle.active {
+    background-color: #3b3650;
+}
+
+.theme-toggle.active .toggle-circle {
+    transform: translateX(42px);
+    background-color: #9f7aea;
+}
+
+.toggle-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    background-color: #f7c72f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition: transform 0.8s;
+}
+
 /* ----- STUNDENPLAN ----- */
 #course-schedule {
     margin: 30px 30px;
@@ -6,21 +58,45 @@
 .schedule-table {
     width: 80%;
     margin: 0 auto;
-    border-collapse: collapse; /* keine doppelten Ränder */
+    border-collapse: collapse;
+    /* keine doppelten Ränder */
 }
 
 .schedule-table th,
 .schedule-table td {
-    border: 1px solid #ccc;
+    border: 1px solid #d6bfc7;
     padding: 15px;
     text-align: center;
     height: 40px;
 }
 
-.schedule-table th {
-    background-color: #f3f4f6;
+body.dark .schedule-table th,
+body.dark .schedule-table td {
+    border: 1px solid #4a4458;
 }
 
-.lunch-break {
-    background-color: #f3f4f6;
+.schedule-table td {
+    background-color: #f3e3e6;
+}
+
+body.dark .schedule-table td {
+    background-color: #2a2630;
+}
+
+.schedule-table th {
+    color: #f4effa;
+    background-color: #7d5a6b;
+}
+
+body.dark .schedule-table th {
+    color: #1e1b22;
+    background-color: #a78bfa;
+}
+
+.lunch-break td {
+    background-color: #e8d7dc;
+}
+
+body.dark .lunch-break td {
+    background-color: #383347;
 }
