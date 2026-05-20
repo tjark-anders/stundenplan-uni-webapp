@@ -1,104 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stundenplan</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stundenplan</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/kursauswahl.css" />
+        <script defer src="js/script.js"></script>
+    </head>
 
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
-</head>
+    <body>
+        <header>
+            <h1>Projekt</h1>
+        </header>
 
-<body>
+        <main>
+            <dialog id="termin-popup">
+                <h3>Übungstermin wählen</h3>
+                <div id="termin-liste"></div>
+                <button id="popup-schliessen">Abbrechen</button>
+            </dialog>
+            <div id="course-selection"></div>
 
-    <header>
-        <h1>Projekt</h1>
-    </header>
+            <!-- STUNDENPLAN -->
+            <div id="course-schedule">
+                <h2>Mein Stundenplan</h2>
 
-    <main>
-        <div id="course-selection">
+                <table class="schedule-table">
+                    <tr>
+                        <th>Zeit</th>
+                        <th>Montag</th>
+                        <th>Dienstag</th>
+                        <th>Mittwoch</th>
+                        <th>Donnerstag</th>
+                        <th>Freitag</th>
+                    </tr>
 
-        </div>
+                    <tr>
+                        <td>08:15 - 09:45</td>
+                        <td data-tag="Montag" data-block="1"></td>
+                        <td data-tag="Dienstag" data-block="1"></td>
+                        <td data-tag="Mittwoch" data-block="1"></td>
+                        <td data-tag="Donnerstag" data-block="1"></td>
+                        <td data-tag="Freitag" data-block="1"></td>
+                    </tr>
 
-        <!-- STUNDENPLAN -->
-        <div id="course-schedule">
-            <h2>Mein Stundenplan</h2>
+                    <tr>
+                        <td>10:15 - 11:45</td>
+                        <td data-tag="Montag" data-block="2"></td>
+                        <td data-tag="Dienstag" data-block="2"></td>
+                        <td data-tag="Mittwoch" data-block="2"></td>
+                        <td data-tag="Donnerstag" data-block="2"></td>
+                        <td data-tag="Freitag" data-block="2"></td>
+                    </tr>
 
-            <table class="schedule-table">
-                <tr>
-                    <th>Zeit</th>
-                    <th>Montag</th>
-                    <th>Dienstag</th>
-                    <th>Mittwoch</th>
-                    <th>Donnerstag</th>
-                    <th>Freitag</th>
-                </tr>
+                    <tr class="lunch-break">
+                        <td>11:45 - 12:30</td>
+                        <td colspan="5">Mittagspause</td>
+                    </tr>
 
-                <tr>
-                    <td>08:15 - 09:45</td>
-                    <td data-tag="Montag" data-block="1"></td>
-                    <td data-tag="Dienstag" data-block="1"></td>
-                    <td data-tag="Mittwoch" data-block="1"></td>
-                    <td data-tag="Donnerstag" data-block="1"></td>
-                    <td data-tag="Freitag" data-block="1"></td>
-                </tr>
+                    <tr>
+                        <td>12:30 - 14:00</td>
+                        <td data-tag="Montag" data-block="3"></td>
+                        <td data-tag="Dienstag" data-block="3"></td>
+                        <td data-tag="Mittwoch" data-block="3"></td>
+                        <td data-tag="Donnerstag" data-block="3"></td>
+                        <td data-tag="Freitag" data-block="3"></td>
+                    </tr>
 
-                <tr>
-                    <td>10:15 - 11:45</td>
-                    <td data-tag="Montag" data-block="2"></td>
-                    <td data-tag="Dienstag" data-block="2"></td>
-                    <td data-tag="Mittwoch" data-block="2"></td>
-                    <td data-tag="Donnerstag" data-block="2"></td>
-                    <td data-tag="Freitag" data-block="2"></td>
-                </tr>
+                    <tr>
+                        <td>14:15 - 15:45</td>
+                        <td data-tag="Montag" data-block="4"></td>
+                        <td data-tag="Dienstag" data-block="4"></td>
+                        <td data-tag="Mittwoch" data-block="4"></td>
+                        <td data-tag="Donnerstag" data-block="4"></td>
+                        <td data-tag="Freitag" data-block="4"></td>
+                    </tr>
 
-                <tr class="lunch-break">
-                    <td>11:45 - 12:30</td>
-                    <td colspan="5"> Mittagspause</td>
-                </tr>
+                    <tr>
+                        <td>16:00 - 17:30</td>
+                        <td data-tag="Montag" data-block="5"></td>
+                        <td data-tag="Dienstag" data-block="5"></td>
+                        <td data-tag="Mittwoch" data-block="5"></td>
+                        <td data-tag="Donnerstag" data-block="5"></td>
+                        <td data-tag="Freitag" data-block="5"></td>
+                    </tr>
 
-                <tr>
-                    <td>12:30 - 14:00</td>
-                    <td data-tag="Montag" data-block="3"></td>
-                    <td data-tag="Dienstag" data-block="3"></td>
-                    <td data-tag="Mittwoch" data-block="3"></td>
-                    <td data-tag="Donnerstag" data-block="3"></td>
-                    <td data-tag="Freitag" data-block="3"></td>
-                </tr>
-
-                <tr>
-                    <td>14:15 - 15:45</td>
-                    <td data-tag="Montag" data-block="4"></td>
-                    <td data-tag="Dienstag" data-block="4"></td>
-                    <td data-tag="Mittwoch" data-block="4"></td>
-                    <td data-tag="Donnerstag" data-block="4"></td>
-                    <td data-tag="Freitag" data-block="4"></td>
-                </tr>
-
-                <tr>
-                    <td>16:00 - 17:30</td>
-                    <td data-tag="Montag" data-block="5"></td>
-                    <td data-tag="Dienstag" data-block="5"></td>
-                    <td data-tag="Mittwoch" data-block="5"></td>
-                    <td data-tag="Donnerstag" data-block="5"></td>
-                    <td data-tag="Freitag" data-block="5"></td>
-                </tr>
-
-                <tr>
-                    <td>17:45 - 19:15</td>
-                    <td data-tag="Montag" data-block="6"></td>
-                    <td data-tag="Dienstag" data-block="6"></td>
-                    <td data-tag="Mittwoch" data-block="6"></td>
-                    <td data-tag="Donnerstag" data-block="6"></td>
-                    <td data-tag="Freitag" data-block="6"></td>
-                </tr>
-            </table>
-
-        </div>
-
-    </main>
-
-</body>
-
+                    <tr>
+                        <td>17:45 - 19:15</td>
+                        <td data-tag="Montag" data-block="6"></td>
+                        <td data-tag="Dienstag" data-block="6"></td>
+                        <td data-tag="Mittwoch" data-block="6"></td>
+                        <td data-tag="Donnerstag" data-block="6"></td>
+                        <td data-tag="Freitag" data-block="6"></td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </body>
 </html>

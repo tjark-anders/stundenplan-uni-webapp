@@ -1,0 +1,15 @@
+/* ----- Kursauswahl ----- */
+
+#course-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.kurs-karte {
+    width: 300px;
+    background-color: beige;
+    border: 1px solid burlywood;
+    border-radius: 8px;
+    padding: 16px;
+}

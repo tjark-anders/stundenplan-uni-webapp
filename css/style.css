@@ -1,26 +1,24 @@
-
-
 /* ----- STUNDENPLAN ----- */
 #course-schedule {
     margin: 30px 30px;
 }
 
 .schedule-table {
-  width: 80%;
-  margin: 0 auto;
-  border-collapse: collapse; /* keine doppelten Ränder */
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse; /* keine doppelten Ränder */
 }
 
 .schedule-table th,
 .schedule-table td {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
-  height: 40px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    height: 40px;
 }
 
 .schedule-table th {
-  background-color: #f3f4f6;
+    background-color: #f3f4f6;
 }
 
 .lunch-break {
