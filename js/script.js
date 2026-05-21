@@ -6,10 +6,15 @@ zweites .then behandelt die empfangenden daten konkret
 */
 
 fetch("/api/kurse")
+
   .then((response) => response.json())
+
   .then((data) => {
-    data.forEach((kurs) => {
-      const karte = document.createElement("div");
+
+
+    data.forEach((kurs) => { //makes a new card for each json-Element
+
+      const karte = document.createElement("div"); //creates a card (HTML)
       karte.className = "kurs-karte";
       karte.innerHTML = `
         <h3>${kurs.name}</h3>
@@ -18,31 +23,50 @@ fetch("/api/kurse")
         <button>Hinzufügen</button>
       `;
       document.getElementById("course-selection").appendChild(karte);
+
+
       const button = karte.querySelector("button");
-      button.onclick = () => {
+
+      button.onclick = () => {  //add course Button functionality
+
         const popup = document.getElementById("termin-popup");
         const terminListe = document.getElementById("termin-liste");
         terminListe.innerHTML = ""; // leeren falls schon was drin ist
 
-        kurs.termine.forEach((termin) => {
+        kurs.termine.forEach((termin) => { //creates all button-selection-options for the selected course
+
           const terminButton = document.createElement("button");
-          terminButton.onclick = () => {
+
+          terminButton.textContent = `${termin.typ} - ${termin.tag} Block ${termin.block}`;
+          terminListe.appendChild(terminButton);
+
+          terminButton.onclick = () => {  //adds selection to the timetable
             const zelle = document.querySelector(
               `td[data-tag="${termin.tag}"][data-block="${termin.block}"]`,
             );
             zelle.textContent = kurs.name;
             document.getElementById("termin-popup").close();
           };
-          terminButton.textContent = `${termin.typ} - ${termin.tag} Block ${termin.block}`;
-          terminListe.appendChild(terminButton);
+
         });
+
         popup.showModal();
+
       };
+
       document.getElementById("popup-schliessen").onclick = () => {
         document.getElementById("termin-popup").close();
       };
+
+
     });
+
   });
+
+
+/*
+Dark-/Lightmode implementation with Button interaction
+ */
 const themeToggle = document.querySelector(".theme-toggle");
 const body = document.querySelector("body");
 const toggleImg = document.querySelector(".toggleImg");
