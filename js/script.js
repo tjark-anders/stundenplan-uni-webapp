@@ -17,11 +17,10 @@ fetch("/api/kurse")
             const karte = document.createElement("div"); //creates a card (HTML)
             karte.className = "kurs-karte";
             karte.innerHTML = `
-        <h3>${kurs.name}</h3>
-        <p>Dozent: ${kurs.dozent}</p>
-        <p>ECTS: ${kurs.ects}</p>
-        <button>Hinzufügen</button>
-        <button>Hinzufügen</button>
+                <h3>${kurs.name}</h3>
+                <p>Dozent: ${kurs.dozent}</p>
+                <p>ECTS: ${kurs.ects}</p>
+                <button>Hinzufügen</button>
       `;
             document.getElementById("course-selection").appendChild(karte);
 
@@ -46,7 +45,7 @@ fetch("/api/kurse")
                             `td[data-tag="${termin.tag}"][data-block="${termin.block}"]`,
                         );
 
-                        checkContent(kurs.name, zelle);
+                        checkContent(kurs.name, termin, zelle);
 
                         document.getElementById("termin-popup").close();
 
@@ -92,14 +91,17 @@ themeToggle.addEventListener("click", function () {
 /*
 Checks whether a course was already added or if it's a new element in the table
  */
-function checkContent(kursName, content) {
+function checkContent(kursName, selectedDay, content) {
+
     let innerContent = content.querySelectorAll("p");
     let sameElementExists = false;
     let thereIsAtLeastOneElement = innerContent.length > 0;
 
+    let kursTyp = normalizeCourseType(selectedDay.typ).toUpperCase();
+    let kursFullText = kursTyp + ": " + kursName;
 
     innerContent.forEach((element) => { //searches whether the same element that will  be added is in the table or if the table already has at least one element
-        if (element.textContent === kursName) {
+        if (element.textContent === kursFullText) {
             sameElementExists = true;
         }
     });
@@ -116,6 +118,26 @@ function checkContent(kursName, content) {
         }
     }
 
-    content.innerHTML += `<p>${kursName}</p>`;
+    const p = document.createElement("p"); //adds new course to table
+    p.textContent = kursFullText;
+    p.classList.add("elementImStundenplan");
+    p.classList.add(kursTyp.toLowerCase());
+    content.appendChild(p);
 
+}
+
+/*
+makes course-type uniform and standardized
+ */
+function normalizeCourseType(typ) {
+    switch (typ) {
+        case "Vorlesung":
+            return "vl";
+        case "Übung":
+            return "ue";
+        case "Tutorium":
+            return "tut";
+        default:
+            return "";
+    }
 }

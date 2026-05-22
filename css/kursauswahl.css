@@ -13,3 +13,21 @@
     border-radius: 8px;
     padding: 16px;
 }
+
+.elementImStundenplan {
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.ue {
+    background-color: burlywood;
+}
+
+.tut {
+    background-color: #7d5a6b;
+    color: #f4effa;
+}
+
+.vl {
+    background-color: beige;
+}
