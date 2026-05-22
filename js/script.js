@@ -21,6 +21,7 @@ fetch("/api/kurse")
         <p>Dozent: ${kurs.dozent}</p>
         <p>ECTS: ${kurs.ects}</p>
         <button>Hinzufügen</button>
+        <button>Hinzufügen</button>
       `;
             document.getElementById("course-selection").appendChild(karte);
 
@@ -49,7 +50,6 @@ fetch("/api/kurse")
 
                         document.getElementById("termin-popup").close();
 
-                        console.log(zelle);
                     };
 
                 });
