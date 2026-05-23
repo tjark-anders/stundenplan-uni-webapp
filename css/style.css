@@ -9,9 +9,14 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     margin: 30px;
+}
+header h1{
+    justify-self: center;
+    grid-column: 2;
 }
 
 /* ----- DARKMODE TOGGLE ----- */
@@ -20,6 +25,8 @@ header {
     height: 44px;
     border: none;
     border-radius: 999px;
+    justify-self: end;
+    grid-column: 3;
 
     background-color: #fff0b8;
     cursor: pointer;
@@ -52,7 +59,7 @@ header {
 
 /* ----- STUNDENPLAN ----- */
 #course-schedule {
-    margin: 30px 30px;
+    margin: 60px 30px;
 }
 
 .schedule-table {
@@ -99,4 +106,10 @@ body.dark .schedule-table th {
 
 body.dark .lunch-break td {
     background-color: #383347;
+}
+
+.tableSectionHeader {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
 }
