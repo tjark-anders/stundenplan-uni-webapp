@@ -6,15 +6,18 @@ body.dark {
 body {
     background-color: #f7edee;
     color: #3e2f36;
+
 }
 
+/* ----- HEADER ----- */
 header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin: 30px;
 }
-header h1{
+
+header h1 {
     justify-self: center;
     grid-column: 2;
 }
