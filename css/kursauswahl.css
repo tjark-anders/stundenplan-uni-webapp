@@ -2,6 +2,9 @@
 
 #course-selection {
     display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 16px;
 }
@@ -9,9 +12,19 @@
 .kurs-karte {
     width: 300px;
     background-color: beige;
-    border: 1px solid burlywood;
+    border: 1px solid #7d5a6b;
     border-radius: 8px;
     padding: 16px;
+}
+body.dark .kurs-karte {
+    color: #3e2f36;
+    background-color: #a78bfa;
+}
+
+#termin-popup {
+    border-radius: 8px;
+    border: 2px solid #7d5a6b;
+    padding: 1rem;
 }
 
 .elementImStundenplan {
