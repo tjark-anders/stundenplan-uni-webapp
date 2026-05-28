@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+.impressum-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg,
+            #f7edee,
+            #fbdefa);
+}
+
+.impressum-card {
+    width: 420px;
+    padding: 40px;
+    text-align: center;
+
+    background-color: rgba(255, 255, 255, 0.45);
+
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    box-shadow: 0 20px 45px rgba(125, 90, 107, 0.22);
+}
+
+.impressum-card h1 {
+    margin-bottom: 12px;
+    color: #3e2f36;
+}
+
+.impressum-card h2 {
+    margin-bottom: 4px;
+    color: #7d5a6b;
+}
+
+.dozent {
+    margin-bottom: 30px;
+}
+
+.impressum-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 30px;
+}
+
+.impressum-card li {
+    padding: 8px;
+}
+
+.impressum-card a {
+    color: white;
+    background-color: #7d5a6b;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+}

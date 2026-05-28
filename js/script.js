@@ -20,7 +20,7 @@ fetch("/api/kurse")
                 <h3>${kurs.name}</h3>
                 <p>Dozent: ${kurs.dozent}</p>
                 <p>ECTS: ${kurs.ects}</p>
-                <button>Hinzufügen</button>
+                <button class="add-button">Hinzufügen</button>
       `;
             document.getElementById("course-selection").appendChild(karte);
 
