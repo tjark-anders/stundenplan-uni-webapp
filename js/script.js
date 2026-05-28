@@ -20,12 +20,13 @@ fetch("/api/kurse")
                 <h3>${kurs.name}</h3>
                 <p>Dozent: ${kurs.dozent}</p>
                 <p>ECTS: ${kurs.ects}</p>
-                <button class="add-button">Hinzufügen</button>
+                <button class="course-sel-button add-button">Hinzufügen</button>
+                <button class="course-sel-button info-button">Info</button>
       `;
             document.getElementById("course-selection").appendChild(karte);
 
-
-            const button = karte.querySelector("button");
+            /* Add Button */
+            const button = karte.querySelector(".add-button");
 
             button.onclick = () => {  //add course Button functionality
 
@@ -57,10 +58,28 @@ fetch("/api/kurse")
 
             };
 
+            /* Info Button */
+            const infoButton = karte.querySelector(".info-button");
+
+            infoButton.onclick = () => {
+
+                const popup = document.getElementById("info-popup");
+                const description = document.getElementById("course-description");
+                description.textContent = `${kurs.beschreibung}`;
+
+                popup.showModal();
+
+            }
+
             document.getElementById("popup-schliessen").onclick = () => {
                 document.getElementById("termin-popup").close();
             };
 
+            document.getElementById("info-popup-schliessen").onclick = () => {
+
+                document.getElementById("info-popup").close();
+
+            };
 
         });
 

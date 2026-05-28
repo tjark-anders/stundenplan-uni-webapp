@@ -33,7 +33,7 @@ body.dark .kurs-karte {
     box-shadow: 0 0 20px rgba(120, 90, 170, 0.18);
 }
 
-.add-button {
+.course-sel-button {
     background-color: #7d5a6b;
     color: white;
     border: none;
@@ -44,23 +44,24 @@ body.dark .kurs-karte {
     transition: 0.2s;
 }
 
-body.dark .add-button {
+body.dark .course-sel-button {
     background-color: #695488;
 }
 
-.add-button:hover {
+.course-sel-button:hover {
     background-color: #684856;
     transform: scale(1.07);
 }
 
-body.dark .add-button:hover {
+body.dark .course-sel-button:hover {
     background-color: #7359a0;
 }
 
-#termin-popup {
+.popup {
     border-radius: 8px;
     border: 2px solid #7d5a6b;
     padding: 1rem;
+    max-width: 50%;
 }
 
 .elementImStundenplan {
