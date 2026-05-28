@@ -1,19 +1,20 @@
+let alleKurse = [];
+
 /* damit senden wir einen HTTP request an den Server.
 Da fetch asynchron ist haben wir .then stehen um auf antworten entsprechend
 zu reagieren (hier wird die antwort direkt in ein json objekt umgewandelt).
 
 zweites .then behandelt die empfangenden daten konkret
 */
-
 fetch("/api/kurse")
 
     .then((response) => response.json())
 
     .then((data) => {
 
+        alleKurse = data;
 
         data.forEach((kurs) => { //makes a new card for each json-Element
-
             const karte = document.createElement("div"); //creates a card (HTML)
             karte.className = "kurs-karte";
             karte.innerHTML = `
@@ -46,7 +47,7 @@ fetch("/api/kurse")
                             `td[data-tag="${termin.tag}"][data-block="${termin.block}"]`,
                         );
 
-                        checkContent(kurs.name, termin, zelle);
+                        checkContent(kurs, termin, zelle);
 
                         document.getElementById("termin-popup").close();
 
@@ -84,7 +85,7 @@ fetch("/api/kurse")
         });
 
     });
-
+timetableInfo();
 
 /*
 Dark-/Lightmode implementation with Button interaction
@@ -106,18 +107,57 @@ themeToggle.addEventListener("click", function () {
     }
 });
 
+/*
+Handles click on timetable entry and opens course popup with details
+*/
+function timetableInfo() {
+
+    document.querySelector(".schedule-table").addEventListener("click", (event) => {
+        const contains = event.target.classList.contains("elementImStundenplan");
+
+        if (!contains) {
+            return;
+        }
+
+        let element = event.target;
+
+        const kursId = element.dataset.kursId;
+        const terminId = element.dataset.terminId;
+
+        const kurs = alleKurse.find(currentKurs => {
+            return currentKurs.id == kursId;
+        });
+
+        const termin = kurs.termine.find(currentTermin => {
+            return currentTermin.id == terminId;
+        });
+
+
+        const description = document.getElementById("course-description");
+        description.innerHTML = `
+        <p>Kurs: ${kurs.name}</p>
+        <p>Dozent: ${kurs.dozent}</p>
+        <p>Typ: ${termin.typ}</p>
+        <p>Tag: ${termin.tag} Block ${termin.block}</p>
+        <p>Wiederholung: ${termin.wiederholung}</p>
+        <p>Raum: ${termin.raum}</p>
+    `;
+
+        document.getElementById("info-popup").showModal();
+
+    });
+}
 
 /*
 Checks whether a course was already added or if it's a new element in the table
  */
-function checkContent(kursName, selectedDay, content) {
-
+function checkContent(kurs, selectedDay, content) {
     let innerContent = content.querySelectorAll("p");
     let sameElementExists = false;
     let thereIsAtLeastOneElement = innerContent.length > 0;
 
     let kursTyp = normalizeCourseType(selectedDay.typ).toUpperCase();
-    let kursFullText = kursTyp + ": " + kursName;
+    let kursFullText = kursTyp + ": " + kurs.name;
 
     innerContent.forEach((element) => { //searches whether the same element that will  be added is in the table or if the table already has at least one element
         if (element.textContent === kursFullText) {
@@ -141,6 +181,8 @@ function checkContent(kursName, selectedDay, content) {
     p.textContent = kursFullText;
     p.classList.add("elementImStundenplan");
     p.classList.add(kursTyp.toLowerCase());
+    p.dataset.kursId = kurs.id;
+    p.dataset.terminId = selectedDay.id;
     content.appendChild(p);
 
 }
