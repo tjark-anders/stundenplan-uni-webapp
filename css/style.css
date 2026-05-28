@@ -1,12 +1,17 @@
-body.dark {
-    background-color: #1e1b22;
-    color: #f4effa;
+body {
+    margin: 0;
+    color: #3e2f36;
+    background: linear-gradient(135deg,
+            #f7edee,
+            #fbdefa);
 }
 
-body {
-    background-color: #f7edee;
-    color: #3e2f36;
-
+body.dark {
+    color: #f1eaf8;
+    background: linear-gradient(135deg,
+            #15121c,
+            #22192c,
+            #312042);
 }
 
 /* ----- HEADER ----- */
@@ -20,6 +25,7 @@ header {
 header h1 {
     justify-self: center;
     grid-column: 2;
+    font-size: 3rem;
 }
 
 /* ----- DARKMODE TOGGLE ----- */
@@ -70,6 +76,11 @@ header h1 {
     margin: 0 auto;
     border-collapse: collapse;
     /* keine doppelten Ränder */
+
+    border-radius: 20px;
+    overflow: hidden;
+    /* alles außerhalb verstecken */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
 }
 
 .schedule-table th,
@@ -86,7 +97,7 @@ body.dark .schedule-table td {
 }
 
 .schedule-table td {
-    background-color: #f3e3e6;
+    background-color: rgba(243, 227, 230, 0.45);
 }
 
 body.dark .schedule-table td {
@@ -97,10 +108,8 @@ body.dark .schedule-table td {
     color: #f4effa;
     background-color: #7d5a6b;
 }
-
 body.dark .schedule-table th {
-    color: #1e1b22;
-    background-color: #a78bfa;
+    background: #695488;
 }
 
 .lunch-break td {
@@ -115,4 +124,25 @@ body.dark .lunch-break td {
     display: flex;
     justify-content: center;
     margin: 2rem;
+}
+
+/* ----- FOOTER ------*/
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #7d5a6b;
+    padding: 10px;
+}
+body.dark footer {
+        background: #695488;
+
+}
+
+footer a {
+    color: #f1eaf8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
