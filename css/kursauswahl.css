@@ -27,10 +27,11 @@
 }
 
 body.dark .kurs-karte {
-    background:
-        rgba(47, 34, 68, 0.92);
-    border: 1px solid rgba(220, 190, 255, 0.35);
-    box-shadow: 0 0 20px rgba(120, 90, 170, 0.18);
+    background-color: rgba(37, 28, 55, 0.95);
+border: 1px solid rgba(220, 200, 255, 0.5);
+    box-shadow:
+        0 0 25px rgba(120, 90, 170, 0.15),
+        0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .add-button {
@@ -54,7 +55,7 @@ body.dark .add-button {
 }
 
 body.dark .add-button:hover {
-    background-color: #7359a0;
+    background-color: #7359a0; 
 }
 
 #termin-popup {
@@ -69,16 +70,30 @@ body.dark .add-button:hover {
 }
 
 .ue {
-    background-color: burlywood;
+    background-color: #cfe8c9;
+    color: #2f4a2b;
+}
+body.dark .ue {
+    background-color: #456842;
+    color: #f1eaf8;
 }
 
 .tut {
-    background-color: #7d5a6b;
-    color: #f4effa;
+    background-color: #d8c7f0;
+    color: #4a3568;
+}
+body.dark .tut {
+    background-color: #6b4ea0;
+    color: #f1eaf8;
 }
 
 .vl {
-    background-color: beige;
+    background-color: #b8d8ff;
+    color: #1f3c5a;
+}
+body.dark .vl {
+    background-color: #365b8c;
+    color: #f1eaf8;
 }
 
 #termin-liste {

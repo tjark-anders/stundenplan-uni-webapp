@@ -1,9 +1,12 @@
 body {
     margin: 0;
     color: #3e2f36;
-    background: linear-gradient(135deg,
-            #f7edee,
-            #fbdefa);
+    background: linear-gradient(
+        135deg,
+        #fdf3f5,
+        #f5e9fa,
+        #ebe4ff
+    );
 }
 
 body.dark {
@@ -141,6 +144,10 @@ body.dark footer {
 footer a {
     color: #f1eaf8;
     text-decoration: none;
+}
+
+body.dark footer a {
+    color: #15121c
 }
 
 footer a:hover {
