@@ -2,9 +2,11 @@ body {
     margin: 0;
     color: #3e2f36;
     background: linear-gradient(135deg,
-            #f7edee,
-            #fbdefa);
+            #fdf3f5,
+            #f5e9fa,
+            #ebe4ff);
 }
+
 
 body.dark {
     color: #f1eaf8;
@@ -108,6 +110,7 @@ body.dark .schedule-table td {
     color: #f4effa;
     background-color: #7d5a6b;
 }
+
 body.dark .schedule-table th {
     background: #695488;
 }
@@ -133,14 +136,20 @@ footer {
     background-color: #7d5a6b;
     padding: 10px;
 }
+
 body.dark footer {
-        background: #695488;
+    background: #695488;
 
 }
 
 footer a {
     color: #f1eaf8;
     text-decoration: none;
+}
+
+body.dark footer a {
+    color: #15121c;
+
 }
 
 footer a:hover {
