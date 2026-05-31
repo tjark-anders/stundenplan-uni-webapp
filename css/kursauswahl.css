@@ -90,16 +90,33 @@ body.dark .course-sel-button:hover {
 }
 
 .ue {
-    background-color: burlywood;
+    background-color: #cfe8c9;
+    color: #2f4a2b;
+}
+
+body.dark .ue {
+    background-color: #456842;
+    color: #f1eaf8;
 }
 
 .tut {
-    background-color: #7d5a6b;
-    color: #f4effa;
+    background-color: #d8c7f0;
+    color: #4a3568;
+}
+
+body.dark .tut {
+    background-color: #6b4ea0;
+    color: #f1eaf8;
 }
 
 .vl {
-    background-color: beige;
+    background-color: #b8d8ff;
+    color: #1f3c5a;
+}
+
+body.dark .vl {
+    background-color: #365b8c;
+    color: #f1eaf8;
 }
 
 #termin-liste {
